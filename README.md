@@ -1,8 +1,9 @@
-# food-picture-01 — Rich Hakata Tonkotsu Ramen with Torched Chashu Ajitama and Black Garlic Oil
+# food-picture-01 — A5 Wagyu Tataki on Volcanic Slate with Garlic Crisps & Micro-Shiso
 
-High-aesthetic, photorealistic culinary photograph for make.fun competition food-picture-01.
+Michelin-grade ultra-photorealistic macro culinary photograph for make.fun competition food-picture-01.
 
-- **Dish**: Rich Hakata Tonkotsu Ramen with Torched Chashu Ajitama and Black Garlic Oil
+- **Cuisine**: Japanese
+- **Dish**: A5 Wagyu Tataki on Volcanic Slate with Garlic Crisps & Micro-Shiso
 - **Resolution**: 1024x1024
-- **Format**: JPEG (high efficiency, color-optimized)
-- **Asset**: `hakata-tonkotsu-ramen-special.jpg`
+- **Format**: JPEG (color-optimized high-efficiency macro)
+- **Asset**: `wagyu-tataki-volcanic-slate.jpg`

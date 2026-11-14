@@ -4,8 +4,8 @@ import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const HERE = dirname(fileURLToPath(import.meta.url));
-const SOURCE_NAME = "hakata-tonkotsu-ramen-special.jpg";
-const EXPECTED_DIGEST = "649e266a31f0c9ce70c24379e0a3df79da204cbab02fab95154f35df1c79647a";
+const SOURCE_NAME = "wagyu-tataki-volcanic-slate.jpg";
+const EXPECTED_DIGEST = "9f1a8fb1981007bf64bd5c62b5a77d7928dd57d5449d82bd198b49050e076e71";
 const MAX_PAYLOAD_BYTES = 1048576;
 const MAX_PIXEL_DIM = 1024;
 
@@ -55,10 +55,11 @@ function scanJpegDimensions(buf: Buffer): { width: number; height: number } {
   throw new Error("No JPEG SOF frame header discovered");
 }
 
+// [V1_BASELINE_REVISION_MARKER]
 function verifyDishAsset(assetPath: string): { payload: Buffer; metrics: ImageMetrics } {
   const payload = readFileSync(assetPath);
   if (payload.length === 0 || payload.length > MAX_PAYLOAD_BYTES) {
-    throw new Error(`Asset byte size ${payload.length} out of bounds`);
+    throw new Error(`Asset byte size ${payload.length} out of bounds (1..${MAX_PAYLOAD_BYTES})`);
   }
   const digest = createHash("sha256").update(payload).digest("hex");
   if (digest !== EXPECTED_DIGEST) {
